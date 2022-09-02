@@ -1,6 +1,7 @@
 import { useHistory } from "react-router-dom"
 import { ContainerHeader, ListItem, ListMenu } from "./styles"
-
+import {IoSearchCircleOutline} from "react-icons/io5"
+import {BsPersonCircle} from "react-icons/bs"
 const Header=()=>{
     const history= useHistory()
 
@@ -14,6 +15,10 @@ const Header=()=>{
                 <ListItem onClick={()=> history.push("oferta")}>Ofertas</ListItem>
                 <ListItem onClick={()=> history.push("eventos")}>Eventos</ListItem>
             </ListMenu>
+            <div>
+                <IoSearchCircleOutline size={31.66}color="gray"/>
+                <BsPersonCircle size={31.66} color="gray"/>
+            </div>
         </ContainerHeader>
     )
 

@@ -4,6 +4,11 @@ export const ContainerHeader = styled.div`
 margin: 0;
 display: flex;
 box-shadow:  0px 5px 10px gray;
+justify-content: space-evenly;
+align-items: center;
+font-size: 18px;
+font-family: "Lato";
+font-weight: 700;
 padding-left: 15px;
 background-color: white;
     img{
@@ -21,8 +26,6 @@ cursor: pointer;
 margin: 1rem;
 background-color: white;
 border: 1px solid transparent;
-font-size: 18px;
-font-family: "Lato", sans-serif;
     :hover{
     border-bottom: 1px solid darkred;
     transition: 0.2s;
