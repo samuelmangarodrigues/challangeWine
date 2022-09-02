@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import ItemCards from "../../components/ItemCards"
 import { useGetItem } from "../../contexts/ItemContext"
 import { ButtonPagination, ContainerPagination, DivItems, FindProducts } from "./styled"
@@ -7,7 +7,9 @@ import { ButtonPagination, ContainerPagination, DivItems, FindProducts } from ".
 
 const Loja = () => {
 
-    const{items,getItems,totalItems,currentItems,pages,setCurrentPage} = useGetItem()
+    const{items,getItems,totalItems,currentItems,pages,setCurrentPage,filterProductsFunc} = useGetItem()
+    const [filterProducts,setFilterProducts]=useState([])
+    
     useEffect(() => {
         getItems();
       }, [items]);

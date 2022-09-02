@@ -12,6 +12,8 @@ interface ContextTypes{
     currentItems:Iitems[]
     pages:number
     setCurrentPage:Dispatch<SetStateAction<number>>
+    filterProductsFunc: (inputValue:string) => void
+    filteredProds:Iitems[]
 }
 interface Props {
     children: ReactNode;
@@ -40,10 +42,16 @@ function GetProvider({ children }: Props) {
 
     const [items, setItems] = useState<Iitems[]>([]);
     const [totalItems,setTotalItems] = useState<number>(0)
-    const [currentPage,setCurrentPage] = useState(1)
+    const [currentPage,setCurrentPage] = useState(0)
     const [itemsPerPage,setIntemsPerPage] = useState(9)
+    const [filteredProds,setFilteredProds] = useState<Iitems[]>([])
 
-    
+    const filterProductsFunc=(inputValue:string)=>{
+
+        const prod = (items.filter((p)=> p.name.startsWith(inputValue.toUpperCase())))
+        setFilteredProds(prod)
+        console.log(filteredProds)
+    }
     
     const getItems = async () => {
         await api
@@ -60,7 +68,7 @@ function GetProvider({ children }: Props) {
     const currentItems = items.slice(startIndex,endIndex)
 
     return (    
-        <GetItemsContext.Provider value={{ getItems, items,totalItems,currentItems,pages,setCurrentPage}}>
+        <GetItemsContext.Provider value={{ getItems, items,totalItems,currentItems,pages,setCurrentPage,filterProductsFunc,filteredProds}}>
             {children}
         </GetItemsContext.Provider>
 
