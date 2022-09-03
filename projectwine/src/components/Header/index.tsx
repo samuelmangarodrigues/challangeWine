@@ -1,10 +1,7 @@
 import { useHistory } from "react-router-dom"
-import { ContainerHeader, ListItem, ListMenu } from "./styles"
-import {IoSearchCircleOutline} from "react-icons/io5"
+import { ButtonCart, ContainerHeader, ListItem, ListMenu } from "./styles"
 import {BsPersonCircle} from "react-icons/bs"
-import { useState } from "react"
-import { useGetItem } from "../../contexts/ItemContext"
-
+import {CgShoppingCart} from "react-icons/cg"
 const Header=()=>{
 
     const history= useHistory()
@@ -20,6 +17,9 @@ const Header=()=>{
             </ListMenu>
             <div>
                 <BsPersonCircle size={31.66} color="gray"/>
+                <ButtonCart  onClick={()=>history.push("/cart")}>
+                    <CgShoppingCart size={31.66}/>
+                </ButtonCart>
             </div>
         </ContainerHeader>
     )

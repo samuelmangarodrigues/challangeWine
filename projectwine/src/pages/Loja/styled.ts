@@ -58,3 +58,8 @@ font-size: 1rem;
     color: #D14B8F;
     transition: 0.5s;
 }`
+
+export const ContainerButtonAndCard=styled.div`
+display:flex;
+flex-direction:column;
+align-items:center`

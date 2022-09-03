@@ -2,15 +2,17 @@ import { ButtonItems, ContainerCardItem, ContainerDiscount, ContainerItem, Conta
 
 
 interface Iitems{
+    id:number
     image:string
     name:string
     price:number
     discount:number
     priceMember:number
     priceNonMember:number
+    handleFunc:(id:number)=>void
 }
 
-const ItemCards = ({image,price,name,priceMember,priceNonMember,discount}:Iitems)=>{
+const ItemCards = ({id,image,price,name,priceMember,priceNonMember,handleFunc}:Iitems)=>{
     const diferencePrice = price - priceNonMember 
     const discountPorcent = Math.trunc((diferencePrice * 100) / price)
     return (
@@ -30,7 +32,7 @@ const ItemCards = ({image,price,name,priceMember,priceNonMember,discount}:Iitems
                 </ContainerDiscount>
                 <ContainerPriceNoPartner> NÃO SÓCIO  R${priceNonMember}</ContainerPriceNoPartner>
             </ContainerItem>
-            <ButtonItems>ADICIONAR</ButtonItems>
+            <ButtonItems onClick={()=>handleFunc(id)}>ADICIONAR</ButtonItems>
         </ContainerCardItem>
     )
 }

@@ -32,3 +32,9 @@ border: 1px solid transparent;
     color: darkred;
     }
 `
+export const ButtonCart=styled.button`
+background-color: transparent;
+border: none;
+color: gray;
+
+`

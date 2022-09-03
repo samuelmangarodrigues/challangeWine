@@ -2,10 +2,10 @@ import { createContext, Dispatch,ReactNode, SetStateAction, useContext, useState
 import { api } from "../../services";
 
 
-const GetItemsContext = createContext<ContextTypes>({} as ContextTypes)
-export const useGetItem=()=>useContext(GetItemsContext)
+const GetItemsContext = createContext<ContextTypesItems>({} as ContextTypesItems)
+export const useItem=()=>useContext(GetItemsContext)
 
-interface ContextTypes{
+interface ContextTypesItems{
     getItems: () => Promise<void>
     items:Iitems[]
     totalItems:number | undefined
@@ -38,7 +38,7 @@ interface Iitems{
     sommelierComment:string
 }
 
-function GetProvider({ children }: Props) {
+const ItemsProvider = ({ children }: Props)=> {
 
     const [items, setItems] = useState<Iitems[]>([]);
     const [totalItems,setTotalItems] = useState<number>(0)
@@ -49,7 +49,6 @@ function GetProvider({ children }: Props) {
     const filterProductsFunc=(inputValue:string)=>{
 
         const prod = (items.filter(({name})=> name.toLowerCase().includes(inputValue.toLowerCase())))
-
         setFilteredProds(prod)
     }
     
@@ -75,4 +74,4 @@ function GetProvider({ children }: Props) {
     );
 }
 
-export default GetProvider
+export default ItemsProvider
