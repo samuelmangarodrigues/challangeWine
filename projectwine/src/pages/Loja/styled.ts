@@ -27,3 +27,34 @@ margin: 5px;
     animation-delay: unset;
 }
 `
+export const ContainerStore=styled.div`
+display:flex;
+flex-direction: column;
+align-items: center;
+`
+
+export const ButtonSearch=styled.button`
+background-color:transparent;
+border:none;
+margin: 5px;
+border-radius: 4px;
+`
+export const ContainerSearch=styled.div`
+margin: 10px;
+border-radius: 4px;
+display: flex;
+background-color: white;
+justify-content: center;
+`
+export const InputSearch=styled.input`
+border:none;
+border-radius: 4px;
+width: 13.75rem;
+outline:none;
+color: #D14B8F;
+font-size: 1rem;
+
+:hover::placeholder{
+    color: #D14B8F;
+    transition: 0.5s;
+}`

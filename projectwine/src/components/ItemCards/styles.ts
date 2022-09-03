@@ -18,7 +18,7 @@ text-align: center;
 `
 
 export const Img = styled.img`
-width: 12.411rem;
+width: 9.688;
 height: 11.133rem;
 `
 export const ContainerCardItem = styled.div`

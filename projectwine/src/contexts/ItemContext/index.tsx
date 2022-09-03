@@ -1,4 +1,4 @@
-import { createContext, Dispatch, DispatchWithoutAction, ReactNode, SetStateAction, useContext, useState} from "react";
+import { createContext, Dispatch,ReactNode, SetStateAction, useContext, useState} from "react";
 import { api } from "../../services";
 
 
@@ -48,9 +48,9 @@ function GetProvider({ children }: Props) {
 
     const filterProductsFunc=(inputValue:string)=>{
 
-        const prod = (items.filter((p)=> p.name.startsWith(inputValue.toUpperCase())))
+        const prod = (items.filter(({name})=> name.toLowerCase().includes(inputValue.toLowerCase())))
+
         setFilteredProds(prod)
-        console.log(filteredProds)
     }
     
     const getItems = async () => {
