@@ -23,6 +23,7 @@ const Cart=({id,image,name,price,qnt,priceMember,priceNonMember,country,handleCl
 return (
     <ContainerMainCart>
         <ContainerCartCards>
+            
             <Img src={image} alt={name}></Img>
                 <ContainerInfoCart>
                     <NameItem>{name}</NameItem>
