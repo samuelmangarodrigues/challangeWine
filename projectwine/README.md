@@ -4,8 +4,8 @@
 Aplicação desenvolvida em Typescript, framework React.
 
 ### `Bibliotecas utilizadas:`
-Chakra Ui \
-react-Icons \
-react-responsive-carousel \
-typewriter-effect 
+Styled-Components \
+React-Icons \
+Cypress.io \
+Axios 
 
