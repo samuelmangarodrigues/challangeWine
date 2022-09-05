@@ -39,8 +39,7 @@ const Loja = () => {
       <ContainerStore>
         <ContainerSearch>
           <InputSearch
-            id="input-name"
-            name="inputfilter"
+            id="input_name"
             placeholder="Pesquisar"
             onChange={(e) => setInput(e.target.value)}
             value={input}
