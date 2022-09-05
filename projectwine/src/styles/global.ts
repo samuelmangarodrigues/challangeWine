@@ -7,5 +7,8 @@ export default createGlobalStyle`
   button {
     cursor: pointer;
   }
+  a{
+    color: black;
+  }
 
 `;

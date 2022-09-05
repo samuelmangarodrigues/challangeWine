@@ -14,6 +14,7 @@ interface ContextTypesItems{
     setCurrentPage:Dispatch<SetStateAction<number>>
     filterProductsFunc: (inputValue:string) => void
     filteredProds:Iitems[]
+    setFilteredProds:Dispatch<SetStateAction<Iitems[]>>
 }
 interface Props {
     children: ReactNode;
@@ -35,6 +36,7 @@ interface Iitems{
     country:string
     region:string
     flag:string
+    volume:string
     sommelierComment:string
 }
 
@@ -43,9 +45,8 @@ const ItemsProvider = ({ children }: Props)=> {
     const [items, setItems] = useState<Iitems[]>([]);
     const [totalItems,setTotalItems] = useState<number>(0)
     const [currentPage,setCurrentPage] = useState(0)
-    const [itemsPerPage,setIntemsPerPage] = useState(9)
+    const [itemsPerPage] = useState(9)
     const [filteredProds,setFilteredProds] = useState<Iitems[]>([])
-
     const filterProductsFunc=(inputValue:string)=>{
 
         const prod = (items.filter(({name})=> name.toLowerCase().includes(inputValue.toLowerCase())))
@@ -67,7 +68,7 @@ const ItemsProvider = ({ children }: Props)=> {
     const currentItems = items.slice(startIndex,endIndex)
 
     return (    
-        <GetItemsContext.Provider value={{ getItems, items,totalItems,currentItems,pages,setCurrentPage,filterProductsFunc,filteredProds}}>
+        <GetItemsContext.Provider value={{ getItems, items,totalItems,currentItems,pages,setCurrentPage,filterProductsFunc,filteredProds,setFilteredProds}}>
             {children}
         </GetItemsContext.Provider>
 

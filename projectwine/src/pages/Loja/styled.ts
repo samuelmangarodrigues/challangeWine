@@ -12,6 +12,8 @@ export const FindProducts = styled.span`
 font-family:"Lato";`
 
 export const ContainerPagination=styled.div`
+display: flex;
+justify-content: center;
 text-align: center;
 margin: 1rem;
 ` 
@@ -45,6 +47,9 @@ border-radius: 4px;
 display: flex;
 background-color: white;
 justify-content: center;
+@media(max-width: 855px){
+    margin-left: 0;
+}
 `
 export const InputSearch=styled.input`
 border:none;
@@ -57,9 +62,28 @@ font-size: 1rem;
 :hover::placeholder{
     color: #D14B8F;
     transition: 0.5s;
-}`
+}
+`
 
 export const ContainerButtonAndCard=styled.div`
 display:flex;
 flex-direction:column;
-align-items:center`
+align-items:center;`
+
+export const ContaineAllItems =styled.div`
+display: flex;
+flex-wrap: wrap;
+`
+export const ContainerPaginationAndItems = styled.main`
+display: flex;
+justify-content: center;
+align-items: center;
+@media (max-width: 855px){
+    flex-direction: column;
+}
+`
+export const ContainerInputItems=styled.div`
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;`

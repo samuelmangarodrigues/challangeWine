@@ -1,6 +1,7 @@
 import { ReactNode } from "react"
 import GetProvider from "./ItemContext"
 import CartProvider from "./CartContext"
+import FilterProvider from "./FilterPriceContext"
 
 interface Props{
     children:ReactNode
@@ -13,7 +14,9 @@ return(
     
     <GetProvider>
         <CartProvider>
-            {children}
+            <FilterProvider>
+                {children}
+            </FilterProvider>
         </CartProvider>
     </GetProvider>
     </>)

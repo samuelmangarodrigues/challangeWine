@@ -11,7 +11,7 @@ flex-wrap: wrap;
 font-size: 1rem;
 margin: 2rem;
 padding: 1rem;
-width: 16rem;
+width: 14rem;
 height: 20.813rem;
 justify-content: center;
 text-align: center;
