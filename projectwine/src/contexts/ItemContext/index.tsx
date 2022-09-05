@@ -47,6 +47,8 @@ const ItemsProvider = ({ children }: Props)=> {
     const [currentPage,setCurrentPage] = useState(0)
     const [itemsPerPage] = useState(9)
     const [filteredProds,setFilteredProds] = useState<Iitems[]>([])
+
+
     const filterProductsFunc=(inputValue:string)=>{
 
         const prod = (items.filter(({name})=> name.toLowerCase().includes(inputValue.toLowerCase())))

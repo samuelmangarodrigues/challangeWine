@@ -19,6 +19,7 @@ margin: 2rem;
 display: flex;
 background-color: white;
 border-radius: 3px;
+
 @media (max-width: 900px) {
     width: 40rem;
 }
@@ -70,5 +71,4 @@ background-color:#D14B8F;
 border: none;
 border-radius: 5px;
 margin:3px;
-
 `
