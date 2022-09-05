@@ -15,4 +15,7 @@ Não consegui concluir os testes de toda a aplicação ): \
 Tive pouco tempo pra concluir esse teste, então infelizmente
 não ficou como eu queria \
 Estou aberto a pontos de melhoria e dicas :) \
-Comando para testes: yarn test.
+
+
+
+###  Comando para testes: `yarn test`
