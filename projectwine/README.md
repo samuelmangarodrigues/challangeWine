@@ -9,3 +9,9 @@ React-Icons \
 Cypress.io \
 Axios 
 
+### `Observações:`
+
+Não consegui concluir os testes de toda a aplicação ): \
+Tive pouco tempo pra concluir esse teste, então infelizmente
+não ficou como eu queria \
+Estou aberto a pontos de melhoria e dicas :)
